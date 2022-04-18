@@ -1,3 +1,6 @@
+def fibonacci_iterativo(posicion, debe_imprimir):
+
+    
 def fibonacci_recursivo(posicion):
     if posicion < 2:
         return posicion
