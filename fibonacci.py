@@ -19,7 +19,7 @@ print(f"Imprimiendo serie de numeros hasta la  posición {posicion}")
 fibonacci_iterativo(posicion, True)
 
 valor = fibonacci_iterativo(posicion, False)
-print(f"\nFibonacci de {posicion} con método iterativo es {valor}")
+print(f"\nFibonacci de {posicion} con metodo iterativo es {valor}")
 
 valor = fibonacci_recursivo(posicion)
-print(f"Fibonacci de {posicion} con método recursivo es {valor}")
+print(f"Fibonacci de {posicion} con metodo recursivo es {valor}")
