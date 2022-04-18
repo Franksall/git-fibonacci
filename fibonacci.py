@@ -1,7 +1,4 @@
-def fib(n):
-    if n < 2:
-        return n
-    else:
-        return fib(n-1) + fib(n-2)
-a=int(input("Fibonacci de: "))
-print ("es: ",fib(a))
+def fibonacci_recursivo(posicion):
+    if posicion < 2:
+        return posicion
+    return fibonacci_recursivo(posicion - 1) + fibonacci_recursivo(posicion - 2)
