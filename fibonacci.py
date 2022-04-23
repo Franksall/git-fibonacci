@@ -1,7 +1,7 @@
 #Creamos el menu iterativo para que si nos podamos el fibonacci que 
 #quedramos hallar
 menu = """
-Menu
+
 1.-Fibonacci manera iterativa
 2.-Fibonacci manera recursiva
 3.-Fibonacci manera Memoria
@@ -41,6 +41,21 @@ elif op is 2:
     # Obtiene el valor pero no lo imprime con método recursivo
     print(f"Fibonacci de {posicion} con método recursivo es ",fibonacci_recursivo(posicion))
 elif op is 3:
-    print("Tecla error")
+	#añadimos la ultima opcion de que seria un fibonacci de metodo memoria
+    nums = {}
+    def fibmemoria (n) :
+        
+        if n <= 2:
+            return 1
+        if n in nums:
+            return nums [n]
+        else:
+            num = fibmemoria(n-1) + fibmemoria (n-2)
+            nums [n]=num
+            return num
+    posicion = int(input("Fibonacci de: "))
+    for n1 in range(1,posicion):
+        print("[",n1,"] = ",fibmemoria(n1))
+    print("Fibonaci de ",posicion," en metodo memoria es: ",fibmemoria(posicion))
 else:
     print("Tecla error")
