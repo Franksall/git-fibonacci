@@ -7,14 +7,12 @@ Menu
 3.-Fibonacci manera Memoria
 """
 print(menu)
-op=int(input("Elige alguna opcion: "))#Creamos el swicht en python que seria con ifs, 
-
-#para que asi podamos elgir la opcion
-if op is 1:
-  #Se añade el fibonaci iterativo para en al priemra opcion para poder elegirlo
+op=int(input("Elige alguna opcion: "))
+if op is 1:#Se añade el fibonaci iterativo para en al priemra opcion para poder elegirlo
     def fibonacci_iterativo(posicion, debe_imprimir):
         actual = 0
- fibonacci
+        siguiente = 1
+        for x in range(posicion + 1):#un for para que asi en el rango de la posiccion dada imprima su fibonacci
             if debe_imprimir:
                 print("[",x,"] = ",str(actual,) + "\n", end="")
             temporal = actual
@@ -22,13 +20,27 @@ if op is 1:
             siguiente = siguiente + temporal
         return temporal
     posicion = int(input("Fibonacci de: "))
-icion} con método iterativo es {valor}")
+    # Imprime los fibonacci de los numeros hasta la posicion dada
+    print(f"Imprimiendo serie de numeros hasta la  posición {posicion}")
+    fibonacci_iterativo(posicion, True)
+    # Obtiene el valor pero no lo imprime con método iterativo
+    valor = fibonacci_iterativo(posicion, False)
+    print(f"\nFibonacci de {posicion} con método iterativo es {valor}")
 elif op is 2:
-    print("Tecla error")
+    #Se añade el  fibonacci recursivo para que asi se pueda eligirlo
+    def fibonacci_recursivo(n):
+        if n == 0:
+            return 0
+        if n == 1:
+            return 1
+        return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)
+    
+    posicion = int(input("Fibonacci de: "))
+    for n1 in range(1,posicion):
+        print("[",n1,"] = ",fibonacci_recursivo(n1))
+    # Obtiene el valor pero no lo imprime con método recursivo
+    print(f"Fibonacci de {posicion} con método recursivo es ",fibonacci_recursivo(posicion))
 elif op is 3:
     print("Tecla error")
 else:
     print("Tecla error")
-
-
-
