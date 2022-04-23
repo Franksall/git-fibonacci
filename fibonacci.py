@@ -8,9 +8,21 @@ Menu
 """
 print(menu)
 op=int(input("Elige alguna opcion: "))#Creamos el swicht en python que seria con ifs, 
+
 #para que asi podamos elgir la opcion
 if op is 1:
-   print("Tecla error")
+  #Se añade el fibonaci iterativo para en al priemra opcion para poder elegirlo
+    def fibonacci_iterativo(posicion, debe_imprimir):
+        actual = 0
+ fibonacci
+            if debe_imprimir:
+                print("[",x,"] = ",str(actual,) + "\n", end="")
+            temporal = actual
+            actual = siguiente
+            siguiente = siguiente + temporal
+        return temporal
+    posicion = int(input("Fibonacci de: "))
+icion} con método iterativo es {valor}")
 elif op is 2:
     print("Tecla error")
 elif op is 3:
