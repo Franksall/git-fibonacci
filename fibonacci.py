@@ -8,7 +8,7 @@ Menu
 """
 print(menu)
 op=int(input("Elige alguna opcion: "))
-if op is 1:
+if op == 1:
     def fibonacci_iterativo(posicion, debe_imprimir):
         actual = 0
         siguiente = 1
@@ -26,7 +26,7 @@ if op is 1:
     # Obtiene el valor pero no lo imprime con método iterativo
     valor = fibonacci_iterativo(posicion, False)
     print(f"\nFibonacci de {posicion} con método iterativo es {valor}")
-elif op is 2:
+elif op == 2:
     #Se añade el  fibonacci recursivo para que asi se pueda eligirlo
     def fibonacci_recursivo(n):
         if n == 0:
@@ -40,7 +40,7 @@ elif op is 2:
         print("[",n1,"] = ",fibonacci_recursivo(n1))
     # Obtiene el valor pero no lo imprime con método recursivo
     print(f"Fibonacci de {posicion} con método recursivo es ",fibonacci_recursivo(posicion))
-elif op is 3:
+elif op == 3:
     #añadimos la ultima opcion de que seria un fibonacci de metodo memoria
     nums = {}
     def fibmemoria (n) :
