@@ -20,9 +20,6 @@ def fibonacci_recursivo(n):
     return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)
     
 posicion = 8
-for n1 in range(1,posicion):
-    print("[",n1,"] = ",fibonacci_recursivo(n1))
-# Obtiene el valor pero no lo imprime con método recursivo
 print(f"Fibonacci de {posicion} con método recursivo es ",fibonacci_recursivo(posicion))
 
 #añadimos la ultima opcion de que seria un fibonacci de metodo memoria
@@ -38,8 +35,4 @@ def fibmemoria (n) :
         nums [n]=num
         return num
 #Mejoramos el codigo del fibonacci en memoria
-posicion = 8
-for n1 in range(1,posicion):
-    print("[",n1,"] = ",fibmemoria(n1))
 print("Fibonaci de ",posicion," en metodo memoria es: ",fibmemoria(posicion))
-
