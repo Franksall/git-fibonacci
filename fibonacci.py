@@ -1,38 +1,15 @@
-def fibonacci_iterativo(posicion, debe_imprimir):
-    actual = 0
-    siguiente = 1
-    for x in range(posicion + 1):
-        temporal = actual
-        actual = siguiente
-        siguiente = siguiente + temporal
-    return temporal
-posicion = 8
-# Obtiene el valor pero no lo imprime con método iterativo
-valor = fibonacci_iterativo(posicion, False)
-print(f"\nFibonacci de {posicion} con método iterativo es {valor}")
-
-#Se añade el  fibonacci recursivo para que asi se pueda eligirlo
-def fibonacci_recursivo(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return fibonacci_recursivo(n-1) + fibonacci_recursivo(n-2)
-    
-posicion = 8
-print(f"Fibonacci de {posicion} con método recursivo es ",fibonacci_recursivo(posicion))
-
-#añadimos la ultima opcion de que seria un fibonacci de metodo memoria
-nums = {}
-def fibmemoria (n) :
-    
+def fibonacci(n):
     if n <= 2:
         return 1
-    if n in nums:
-        return nums [n]
-    else:
-        num = fibmemoria(n-1) + fibmemoria (n-2)
-        nums [n]=num
-        return num
-#Mejoramos el codigo del fibonacci en memoria
-print("Fibonaci de ",posicion," en metodo memoria es: ",fibmemoria(posicion))
+    a,b = 1,1           # El valor de los dos últimos elementos, a es el elemento anterior, b es el elemento anterior
+    for x in range(3,n+1):
+        v = a + b       #     = la suma de los dos primeros
+        a,b = b,v       #a = b, b = v
+    return v
+
+xite = list(range(1,11))           # 1..10 lista de valores
+fn = []             # A su vez es el cuadrado de n, el cubo de n, el valor de n Fibonacci
+for v in xite:                     #Secuencialmente valores de la función de la computadora
+    fn.append(fibonacci(v))
+
+print("fib Iterativo (n)=",fn)
