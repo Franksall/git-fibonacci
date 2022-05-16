@@ -67,3 +67,12 @@ for v in xlog:                     #Secuencialmente valores de la función de la
     filog.append(fibonaccilog(v))
 
 print("fib Logaritmico(n)=",filog)
+#GRAFICA DE LOS FIBONACCIS
+
+from matplotlib import pyplot as plt     # Sección de dibujo
+plt.plot(xite,fn,linestyle="--",color='green',label="$y=fibonacci iterativo(n)$")
+plt.plot(xr,fr,linestyle="-.",color='black',label="$y=fibonacci Recursivo(n)$")
+plt.plot(xnemo,fmemo,linestyle=":",color='blue',label="$y=fibonacci memoria(n)$")
+plt.plot(xlog,filog,linestyle="-",color='pink',label="$y=fibonacci logaritmico(n)$")
+plt.legend()
+plt.show()
