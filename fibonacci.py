@@ -28,3 +28,42 @@ for v in xr:                     #Secuencialmente valores de la función de la c
     fr.append(fibonaccir(v))
 
 print("fib Recursivo(n)=",fr)
+nums = {}
+def fibonaccimemo(n):
+    if n == 0:
+        return 0
+    if n <= 2:
+        return 1
+    if n in nums:
+        return nums [n]
+    else:
+        num = fibonaccimemo(n-1) + fibonaccimemo (n-2)
+        nums [n]=num
+        return num
+
+xnemo = list(range(1,11))           # 1..10 lista de valores
+fmemo = []             # A su vez es el cuadrado de n, el cubo de n, el valor de n Fibonacci
+for v in xnemo:                     #Secuencialmente valores de la función de la computadora
+    fmemo.append(fibonaccimemo(v))
+
+print("fib Memoria(n)=",fmemo)
+def fibonaccilog(n):
+    even = lambda n: (n % 2 == 0)
+
+    (current, next, p, q) = (0, 1, 0, 1)    
+
+    while (n > 0):
+        if (even(n)):
+            (p, q) = (p**2 + q**2, q**2 + 2*p*q)
+            n /= 2
+        else:
+            (current, next) = (p*current + q*next, q*current + (p+q)*next)
+            n -= 1
+    
+    return current
+xlog = list(range(1,11))           # 1..10 lista de valores
+filog = []             # A su vez es el cuadrado de n, el cubo de n, el valor de n Fibonacci
+for v in xlog:                     #Secuencialmente valores de la función de la computadora
+    filog.append(fibonaccilog(v))
+
+print("fib Logaritmico(n)=",filog)
